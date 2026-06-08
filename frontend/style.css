@@ -45,6 +45,10 @@ h2 {
     font-size: 1.3rem;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Menu */
 .menu-grid {
     display: grid;
@@ -77,6 +81,61 @@ h2 {
     line-height: 1.4;
 }
 
+.menu-card .size-label {
+    display: block;
+    color: #a0a0b0;
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+}
+
+.menu-card .size-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.menu-card .size-option-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    background: #1a1a2e;
+    color: #c7c7d6;
+    border: 1px solid #0f3460;
+    border-radius: 4px;
+    padding: 0.42rem 0.35rem;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.menu-card .size-option-btn:hover:not(:disabled) {
+    border-color: #e94560;
+    color: #fff;
+}
+
+.menu-card .size-option-btn.active {
+    background: #e94560;
+    border-color: #e94560;
+    color: #fff;
+}
+
+.menu-card .size-option-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.menu-card .size-option-btn:focus-visible {
+    outline: 2px solid #e94560;
+    outline-offset: 1px;
+}
+
 .menu-card .price {
     color: #e94560;
     font-weight: bold;
@@ -97,6 +156,175 @@ h2 {
 
 .order-btn:hover {
     background: #c73651;
+}
+
+.pending-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #0f3460;
+    color: #e0e0e0;
+}
+
+.pending-item:last-child {
+    border-bottom: none;
+}
+
+.pending-remove-btn {
+    background: transparent;
+    color: #a0a0b0;
+    border: 1px solid #505070;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.pending-remove-btn:hover {
+    border-color: #e94560;
+    color: #fff;
+}
+
+.remembered-item {
+    opacity: 0.85;
+}
+
+.awaiting-item {
+    opacity: 0.95;
+}
+
+.awaiting-status {
+    color: #f0d07a;
+    font-size: 0.75rem;
+    border: 1px solid #8f7333;
+    border-radius: 4px;
+    padding: 0.2rem 0.45rem;
+    text-align: center;
+}
+
+.remembered-status {
+    color: #7adf9a;
+    font-size: 0.75rem;
+    border: 1px solid #2c7a48;
+    border-radius: 4px;
+    padding: 0.2rem 0.45rem;
+    text-align: center;
+}
+
+.place-order-btn {
+    margin-top: 0.6rem;
+    width: 100%;
+    background: #e94560;
+    color: #fff;
+    border: none;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.place-order-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.previous-orders {
+    margin-top: 1rem;
+    border-top: 1px solid #0f3460;
+    padding-top: 0.8rem;
+}
+
+.previous-orders h3 {
+    color: #a0a0b0;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.previous-order-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #0f3460;
+}
+
+.previous-order-item:last-child {
+    border-bottom: none;
+}
+
+.previous-order-label {
+    color: #d9d9e6;
+    font-size: 0.84rem;
+}
+
+.previous-order-price {
+    color: #e94560;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+#summary-section {
+    margin-top: 1.4rem;
+    background: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.summary-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.summary-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #0f3460;
+}
+
+.summary-list li:last-child {
+    border-bottom: none;
+}
+
+.summary-total {
+    margin-top: 0.9rem;
+    color: #e94560;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.confirm-btn {
+    margin-top: 0.8rem;
+    margin-right: 0.6rem;
+    background: #e94560;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.45rem 0.85rem;
+    cursor: pointer;
+}
+
+.confirm-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.back-btn {
+    margin-top: 0.8rem;
+    background: transparent;
+    color: #e94560;
+    border: 1px solid #e94560;
+    border-radius: 6px;
+    padding: 0.45rem 0.85rem;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: #e94560;
+    color: #fff;
 }
 
 /* Orders */

@@ -21,10 +21,25 @@
         </section>
 
         <section id="orders-section">
-            <h2>Order Queue</h2>
+            <h2>Your Pending Order</h2>
             <div id="orders-list">
-                <p class="empty-state">No orders yet. Pick a drink from the menu!</p>
+                <p class="empty-state">No items added yet. Pick a drink from the menu.</p>
             </div>
+            <button id="place-order-btn" class="place-order-btn" type="button">
+                Place Your Order
+            </button>
+            <div id="previous-orders-section" class="previous-orders hidden">
+                <h3>Previous Orders</h3>
+                <div id="previous-orders-list"></div>
+            </div>
+        </section>
+
+        <section id="summary-section" class="hidden">
+            <h2>Order Summary</h2>
+            <div id="summary-items"></div>
+            <p id="summary-total" class="summary-total"></p>
+            <button id="confirm-summary-btn" class="confirm-btn" type="button">Confirm</button>
+            <button id="back-to-menu-btn" class="back-btn" type="button">Back To Menu</button>
         </section>
     </main>
 
@@ -32,6 +47,6 @@
         <p>BeanBotics Corporation &mdash; Spec-Driven Development Lab</p>
     </footer>
 
-    <script src="/static/script.js"></script>
+    <script src="/static/script.js?v=20260608-4"></script>
 </body>
 </html>
